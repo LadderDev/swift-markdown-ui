@@ -23,7 +23,7 @@ struct TableView: View {
   }
 
   private var label: some View {
-    Grid(horizontalSpacing: self.borderWidth, verticalSpacing: self.borderWidth) {
+      Grid(alignment: .leadingFirstTextBaseline, horizontalSpacing: self.borderWidth, verticalSpacing: self.borderWidth) {
       ForEach(0..<self.rowCount, id: \.self) { row in
         GridRow {
           ForEach(0..<self.columnCount, id: \.self) { column in
