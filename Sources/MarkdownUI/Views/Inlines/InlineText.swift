@@ -28,6 +28,8 @@ struct InlineText: View {
         images: self.inlineImages,
         attributes: attributes
       )
+      .lineLimit(nil)
+      .multilineTextAlignment(.leading)
     }
     .task(id: self.inlines) {
       self.inlineImages = (try? await self.loadInlineImages()) ?? [:]
